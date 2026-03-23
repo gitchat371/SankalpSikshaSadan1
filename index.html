@@ -8,8 +8,35 @@
     body { margin:0; font-family: Arial, sans-serif; }
     header { background:#0d47a1; color:white; padding:15px; display:flex; justify-content:space-between; align-items:center; }
     header h1 { margin:0; }
+
+    nav { position:relative; }
+
     nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; }
     nav a:hover { text-decoration:underline; }
+
+    .dropdown { display:inline-block; position:relative; }
+
+    .dropdown-content {
+      display:none;
+      position:absolute;
+      background:white;
+      min-width:180px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.2);
+      border-radius:8px;
+      overflow:hidden;
+      top:30px;
+    }
+
+    .dropdown-content a {
+      display:block;
+      color:#333;
+      padding:10px;
+      text-decoration:none;
+    }
+
+    .dropdown-content a:hover { background:#f0f0f0; }
+
+    .dropdown:hover .dropdown-content { display:block; }
 
     .hero {
       background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588072432836-e10032774350');
@@ -49,9 +76,34 @@
   <h1>Sankalp Siksha Sadan</h1>
   <nav>
     <a href="#">Home</a>
-    <a href="facilities.html">Facilities</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+
+    <div class="dropdown">
+      <a href="#">Facilities ▼</a>
+      <div class="dropdown-content">
+        <a href="facilities.html">All Facilities</a>
+        <a href="facilities.html#library">Library</a>
+        <a href="facilities.html#lab">Computer Lab</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Services ▼</a>
+      <div class="dropdown-content">
+        <a href="services.html">All Services</a>
+        <a href="services.html#education">Education</a>
+        <a href="services.html#guidance">Guidance</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Contact ▼</a>
+      <div class="dropdown-content">
+        <a href="contact.html">Contact Page</a>
+        <a href="contact.html#phone">Phone</a>
+        <a href="contact.html#email">Email</a>
+      </div>
+    </div>
+
   </nav>
 </header>
 
@@ -90,57 +142,5 @@
   }
 </script>
 
-</body>
-</html>
-
-
-<!-- ================= OTHER PAGES ================= -->
-
-<!-- facilities.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Facilities</title>
-</head>
-<body>
-  <h1>Our Facilities</h1>
-  <ul>
-    <li>Smart Classes</li>
-    <li>Library</li>
-    <li>Computer Lab</li>
-    <li>Sports Ground</li>
-  </ul>
-  <a href="index.html">Back</a>
-</body>
-</html>
-
-<!-- services.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Services</title>
-</head>
-<body>
-  <h1>Our Services</h1>
-  <ul>
-    <li>Quality Education</li>
-    <li>Experienced Teachers</li>
-    <li>Career Guidance</li>
-  </ul>
-  <a href="index.html">Back</a>
-</body>
-</html>
-
-<!-- contact.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact</title>
-</head>
-<body>
-  <h1>Contact Us</h1>
-  <p>Phone: 9876543210</p>
-  <p>Email: info@sankalp.com</p>
-  <a href="index.html">Back</a>
 </body>
 </html>
