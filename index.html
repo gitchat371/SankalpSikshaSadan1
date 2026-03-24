@@ -8,22 +8,25 @@
   <style>
     body { margin:0; font-family: Arial, sans-serif; }
 
-    header {
+   header {
   background:#0d47a1;
   color:white;
-  padding:15px;
+  padding:15px 40px;
   display:flex;
+  justify-content:space-between;
   align-items:center;
 }
 
 header h1 {
   margin:0;
+  font-size:26px;
+  color:white;
+  white-space:nowrap; /* 🔥 important */
 }
 
 nav {
-  margin-left:auto;
   display:flex;
-  align-items:center;
+  gap:15px;  /* 🔥 spacing fix */
 }
 
     nav a {
