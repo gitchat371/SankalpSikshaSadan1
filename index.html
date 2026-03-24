@@ -15,9 +15,10 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
+      flex-wrap:wrap;
     }
 
-    nav { display:flex; align-items:center; }
+    nav { display:flex; align-items:center; flex-wrap:wrap; }
 
     nav a {
       color:white;
@@ -49,7 +50,6 @@
 
     .dropdown-content a:hover { background:#f0f0f0; }
 
-    /* FIX: hover gap issue */
     .dropdown:hover .dropdown-content {
       display:block;
     }
@@ -67,11 +67,48 @@
       text-align:center;
       background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588072432836-e10032774350');
       background-size:cover;
+      padding:20px;
     }
 
-    .section { padding:40px; text-align:center; }
-
     footer { background:#222; color:white; text-align:center; padding:15px; }
+
+    /* 🔥 MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        width:100%;
+      }
+
+      nav a {
+        display:block;
+        margin:5px 0;
+      }
+
+      .dropdown {
+        width:100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        width:100%;
+        box-shadow:none;
+      }
+
+      .hero {
+        height:60vh;
+      }
+
+      .hero h2 {
+        font-size:24px;
+      }
+    }
+
   </style>
 </head>
 
@@ -83,36 +120,34 @@
   <nav>
     <a href="index.html">Home</a>
 
-   <div class="dropdown">
-  <a href="#">Facilities ▼</a>
-  <div class="dropdown-content">
-    <a href="classrooms.html">Classrooms</a>
-    <a href="bus.html">School Bus</a>
-    <a href="sports.html">Sports Ground</a>
-    <a href="water.html">Clean Drinking Water</a>
-  </div>
-</div>
+    <!-- Facilities -->
+    <div class="dropdown">
+      <a href="#">Facilities ▼</a>
+      <div class="dropdown-content">
+        <a href="classrooms.html">Classrooms</a>
+        <a href="bus.html">School Bus</a>
+        <a href="sports.html">Sports Ground</a>
+        <a href="water.html">Clean Drinking Water</a>
+      </div>
     </div>
 
+    <!-- Services -->
     <div class="dropdown">
       <a href="#">Services ▼</a>
       <div class="dropdown-content">
-        <div class="dropdown">
-         <a href="teachers.html">Qualified Teachers</a>
-         <a href="activities.html">Extra Curricular Activities</a>
-         <a href="meetings.html">Regular Parent Meetings</a>
+        <a href="teachers.html">Qualified Teachers</a>
+        <a href="activities.html">Extra Curricular Activities</a>
+        <a href="meetings.html">Regular Parent Meetings</a>
         <a href="safe.html">Safe Environment</a>
-   </div>
       </div>
     </div>
-    </div>
 
+    <!-- Contact -->
     <div class="dropdown">
       <a href="#">Contact ▼</a>
       <div class="dropdown-content">
         <a href="contact.html">Contact Page</a>
       </div>
-    </div>
     </div>
 
   </nav>
@@ -129,83 +164,5 @@
   <p>© 2026 Sankalp Siksha Sadan</p>
 </footer>
 
-</body>
-</html>
-
-
-<!-- ================= FACILITIES PAGE ================= -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Facilities</title>
-  <style>
-    body { font-family:Arial; margin:0; background:#f4f6f9; }
-    .container { max-width:800px; margin:50px auto; background:white; padding:30px; border-radius:10px; }
-    h1 { color:#0d47a1; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Our Facilities</h1>
-    <h3 id="library">📚 Library</h3>
-    <p>Well stocked library with books.</p>
-
-    <h3 id="lab">💻 Computer Lab</h3>
-    <p>Modern computers for students.</p>
-
-    <a href="index.html">⬅ Back</a>
-  </div>
-</body>
-</html>
-
-
-<!-- ================= SERVICES PAGE ================= -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Services</title>
-  <style>
-    body { font-family:Arial; margin:0; background:#f4f6f9; }
-    .container { max-width:800px; margin:50px auto; background:white; padding:30px; border-radius:10px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Our Services</h1>
-
-    <h3 id="education">🎓 Education</h3>
-    <p>Quality education for all classes.</p>
-
-    <h3 id="guidance">🧭 Guidance</h3>
-    <p>Career and personal guidance.</p>
-
-    <a href="index.html">⬅ Back</a>
-  </div>
-</body>
-</html>
-
-
-<!-- ================= CONTACT PAGE ================= -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact</title>
-  <style>
-    body { font-family:Arial; margin:0; background:#f4f6f9; }
-    .container { max-width:600px; margin:60px auto; background:white; padding:30px; border-radius:10px; text-align:center; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Contact Us</h1>
-
-    <p id="phone">📞 9876543210</p>
-    <p id="email">📧 info@sankalp.com</p>
-
-    <a href="index.html">⬅ Back</a>
-  </div>
 </body>
 </html>
