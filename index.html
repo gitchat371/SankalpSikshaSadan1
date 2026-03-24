@@ -70,9 +70,29 @@
       padding:20px;
     }
 
+    /* 🔥 REGISTER BUTTON */
+    .register-btn {
+      display:inline-block;
+      margin-top:20px;
+      padding:15px 30px;
+      background:red;
+      color:white;
+      font-size:22px;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:8px;
+      box-shadow:0 0 15px red;
+      animation: glow 1s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow:0 0 10px red; }
+      to { box-shadow:0 0 25px yellow; }
+    }
+
     footer { background:#222; color:white; text-align:center; padding:15px; }
 
-    /* 🔥 MOBILE RESPONSIVE */
+    /* MOBILE */
     @media (max-width: 768px) {
 
       header {
@@ -120,7 +140,6 @@
   <nav>
     <a href="index.html">Home</a>
 
-    <!-- Facilities -->
     <div class="dropdown">
       <a href="#">Facilities ▼</a>
       <div class="dropdown-content">
@@ -131,7 +150,6 @@
       </div>
     </div>
 
-    <!-- Services -->
     <div class="dropdown">
       <a href="#">Services ▼</a>
       <div class="dropdown-content">
@@ -142,9 +160,8 @@
       </div>
     </div>
 
-    <!-- Contact -->
     <div class="dropdown">
-      <a href="#" onclick="toggleDropdown(event)">Contact ▼</a>
+      <a href="#">Contact ▼</a>
       <div class="dropdown-content">
         <a href="contact.html">Contact Page</a>
       </div>
@@ -157,6 +174,14 @@
   <div>
     <h2>Welcome to Sankalp Siksha Sadan</h2>
     <p>Empowering Education for a Better Future</p>
+
+    <!-- 🔥 REGISTER BUTTON -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1r-uKo2l9BlJRSXZd8BC5o4X4siY1RlZh0balb-FokapU4A/viewform" 
+       target="_blank" 
+       class="register-btn">
+       Register Here
+    </a>
+
   </div>
 </section>
 
@@ -164,82 +189,5 @@
   <p>© 2026 Sankalp Siksha Sadan</p>
 </footer>
 
-</body>
-</html>
-
-<!-- ================= FACILITIES PAGE ================= -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Facilities</title>
-  <style>
-    body { font-family:Arial; margin:0; background:#f4f6f9; }
-    .container { max-width:800px; margin:50px auto; background:white; padding:30px; border-radius:10px; }
-    h1 { color:#0d47a1; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Our Facilities</h1>
-    <h3 id="library">📚 Library</h3>
-    <p>Well stocked library with books.</p>
-
-    <h3 id="lab">💻 Computer Lab</h3>
-    <p>Modern computers for students.</p>
-
-    <a href="index.html">⬅ Back</a>
-  </div>
-</body>
-</html>
-
-
-<!-- ================= SERVICES PAGE ================= -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Services</title>
-  <style>
-    body { font-family:Arial; margin:0; background:#f4f6f9; }
-    .container { max-width:800px; margin:50px auto; background:white; padding:30px; border-radius:10px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Our Services</h1>
-
-    <h3 id="education">🎓 Education</h3>
-    <p>Quality education for all classes.</p>
-
-    <h3 id="guidance">🧭 Guidance</h3>
-    <p>Career and personal guidance.</p>
-
-    <a href="index.html">⬅ Back</a>
-  </div>
-</body>
-</html>
-
-
-<!-- ================= CONTACT PAGE ================= -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact</title>
-  <style>
-    body { font-family:Arial; margin:0; background:#f4f6f9; }
-    .container { max-width:600px; margin:60px auto; background:white; padding:30px; border-radius:10px; text-align:center; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Contact Us</h1>
-
-    <p id="phone">📞 9876543210</p>
-    <p id="email">📧 info@sankalp.com</p>
-
-    <a href="index.html">⬅ Back</a>
-  </div>
 </body>
 </html>
